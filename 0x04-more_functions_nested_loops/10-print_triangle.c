@@ -1,34 +1,26 @@
 #include "main.h"
 
 /**
- * print_triangle - check for a digit
- * @size : integer type
- * Return:void
+ * print_square - prints a square, followed by a new line;
+ * @size: size of the square
  */
-
-void print_triangle(int size)
+void print_square(int size)
 {
-
-	int i = 1, ii;
-
-	while (i <= size && size > 0)
+	if (size <= 0)
 	{
-		ii = 0;
-		while (ii < size - i)
-		{
-			_putchar(' ');
-			ii++;
-		}
-		ii = 0;
-		while (ii < i)
-		{
-			_putchar('#');
-			ii++;
-		}
+		_putchar('\n');
+	} else
+	{
+		int i, j;
 
-		_putchar('\n');
-		i++;
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
 	}
-	if (i == 1)
-		_putchar('\n');
 }
+

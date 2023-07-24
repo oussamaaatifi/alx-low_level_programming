@@ -1,42 +1,26 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - check the code for Holberton School students.
- *
- * Return: void.
+ * print_square - prints a square, followed by a new line;
+ * @size: size of the square
  */
-
-int main(void)
+void print_square(int size)
 {
-
-	int i = 1;
-
-	while (i <= 100)
+	if (size <= 0)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else
-		{
-			printf("%i", i);
-		}
+		_putchar('\n');
+	} else
+	{
+		int i, j;
 
-		if (i != 100)
+		for (i = 0; i < size; i++)
 		{
-			putchar(' ');
+			for (j = 0; j < size; j++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-
-		i++;
 	}
-	putchar('\n');
-	return (0);
-
 }
+
